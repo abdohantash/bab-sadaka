@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_206" data-name="Rectangle 206" width="20" height="20" transform="translate(269 505)" fill="#505050" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="vedio-icon" transform="translate(-263 -499)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="16" cy="16" r="16" transform="translate(263 499)" fill="#fff"/>
+    <g id="vedio-icon-2" data-name="vedio-icon" transform="translate(2)" clip-path="url(#clip-path)">
+      <g id="play-button" transform="translate(270.939 508.288)">
+        <g id="Group_19" data-name="Group 19" transform="translate(1.061 0)">
+          <path id="Path_59" data-name="Path 59" d="M12.488,5.891,9.016,3.865C8.241,3.412,6.974,2.673,6.2,2.221L2.6.2C1.823-.258,1.061.106,1.061,1V12.422c0,.9.762,1.261,1.537.809l3.536-2.026c.776-.452,2.076-1.191,2.851-1.644l3.489-2.026A.873.873,0,0,0,12.488,5.891Z" transform="translate(-1.061 0)" fill="#b83737"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
