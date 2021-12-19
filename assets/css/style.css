@@ -8827,7 +8827,7 @@ input[type=submit] {
   width: 100%;
   border: 1px solid #ededed;
   background-color: #ffffff;
-  height: 40px;
+  height: 36px;
   line-height: 24px;
   padding: 7px 15px;
   color: #747474;
@@ -10631,10 +10631,10 @@ body::-webkit-scrollbar-thumb {
 
 
 .libraries {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
   grid-gap: 45px;
-  /* margin-top: 45px; */
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .libraries li {
@@ -10646,21 +10646,22 @@ body::-webkit-scrollbar-thumb {
 }
 
 .libraries li img {
-  height: 280px;
-  object-fit: contain;
+  /* height: 280px;
+  object-fit: contain; */
   transition: .3s;
   -webkit-transition: .3s;
   -moz-transition: .3s;
   -ms-transition: .3s;
   -o-transition: .3s;
+  width: 250px;
 }
 
 .libraries li a:hover img {
-  transform: translateY(-15px);
-  -webkit-transform: translateY(-15px);
-  -moz-transform: translateY(-15px);
-  -ms-transform: translateY(-15px);
-  -o-transform: translateY(-15px);
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
 }
 
 .libraries li p {
@@ -10684,13 +10685,13 @@ body::-webkit-scrollbar-thumb {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
-  margin-top: 40px;
 }
 
 .books li a {
   display: flex;
   align-items: center;
-  background: #e3e3e31a;
+  background: #0000008c;
+  border: 3px solid #ffffff36;
   border-radius: 15px;
   padding: 10px;
 }
@@ -10705,6 +10706,7 @@ body::-webkit-scrollbar-thumb {
 
 .books li .name-book h3 {
   font-size: 18px;
+  line-height: inherit;
 }
 
 .books li .name-book p {
@@ -10928,14 +10930,14 @@ ul.list-hadith {
 }
 
 .read-praying li {
-  padding: 10px 15px;
-  background: #000000c7;
-  border-radius: 15px;
-  font-size: 23px;
-  line-height: 40px;
-  color: #a78e58;
-  box-shadow: 0 0 0 3px #ffffff3b;
-  margin-bottom: 24px;
+    padding: 10px 15px;
+    background: #000000c7;
+    border-radius: 15px;
+    font-size: 22px;
+    line-height: initial;
+    color: #a78e58;
+    box-shadow: 0 0 0 3px #ffffff3b;
+    margin-bottom: 20px;
   width: 95%;
 }
 
@@ -11056,8 +11058,7 @@ ul.list-hadith {
 
 .rosary-center img {
   height: 200px;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin: 50px auto;
 }
 
 .settings {
@@ -11128,20 +11129,32 @@ ul.list-hadith {
 .contact img {
   margin: 0 auto;
   display: block;
-  margin-bottom: 30px;
-  height: 180px;
+  margin-bottom: 20px;
+  height: 160px;
+}
+
+.about h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 
 .about p {
   margin: 0;
   line-height: 30px;
   text-align: justify;
+  font-size: 18px;
 }
 
 .contact {
   width: max-content;
   background: #00000073;
   box-shadow: 0 0 0 5px #58585861;
+}
+
+.contact h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .contact .inputs {
@@ -11334,8 +11347,8 @@ ul.list-hadith {
 }
 
 .share-div .title-page {
-  font-size: 38px;
-  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 200px;
 }
 
 
@@ -11447,7 +11460,7 @@ font-family: sans-serif;
 
 .input-file input{
   background-color: #00000085;
-  border: 2px solid #ababab52;
+  border: 0;
   color: #d1d1d1;
   font-size: 18px;
   border-radius: 35px;
@@ -11456,6 +11469,7 @@ font-family: sans-serif;
   width: 430px;
   font-family: sans-serif;
   cursor: pointer;
+  padding: 7px;
 }
 
 .btm-part {
@@ -11551,7 +11565,8 @@ input[type="number"] {
 }
 
 .solid-container {
-  height: calc(100vh - 92px);
+  height: calc(100vh - 100px);
+  position: relative;
 }
 
 .btn-sidebar {
@@ -11602,11 +11617,57 @@ input[type="number"] {
 [data-name='btnAutoplay'],
 [data-name='btnSelect'],
 [data-name='btnBookmark'],
-[data-name='btnAutoplay'] {
+[data-name='btnAutoplay'],
+[data-name='btnSound'],
+[data-name='btnDownloadPages'] {
   display: none;
 }
 
 
+.at-share-btn-elements {
+  text-align: center !important;
+}
+
+#at-expanded-menu-host .at-expanded-menu {
+  left: 0 !important;
+  margin-left: 0 !important;
+  text-align: center !important;
+}
+#at-expanded-menu-host .at-expanded-menu-top-services-header {
+  width: auto !important;
+}
+#at-expanded-menu-host .at-expanded-menu-service-list {
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+#at-expanded-menu-host .at-expanded-menu-ft {
+  margin: 20px !important;
+  padding-bottom: 0 !important;
+  width: auto !important;
+}
+#at-expanded-menu-host .at-copy-link-share {
+  margin: 0 auto !important;
+  width: 575px !important;
+}
+#at-expanded-menu-host .at-copy-link-share-page-url {
+  border: 0 !important;
+  text-align: left !important;
+}
+#at-expanded-menu-host .at-expanded-menu-service-list.border-before:before {
+  margin-top: 0 !important;
+  padding-bottom: 20px !important;
+}
+
+#at-expanded-menu-host .at-expanded-menu-search {
+  direction: ltr !important;
+  height: 50px !important;
+    max-height: 50px !important;
+    line-height: 50px !important;
+}
+
+#at-expanded-menu-host .at-copy-link-result-message {
+  direction: ltr !important;
+}
 
 /* abdo responsive */ 
 
@@ -11654,6 +11715,39 @@ input[type="number"] {
 .list-videos {
   grid-template-columns: 1fr 1fr 1fr;
 }
+.libraries {
+  grid-gap: 30px;
+}
+
+.img-library {
+  margin-bottom: 40px;
+}
+
+.img-library img {
+  height: 200px;
+}
+
+.rosary .rosary-select .select-div select {
+  width: 260px;
+}
+
+.list-forty {
+    min-width: 250px;
+    width: 250px;
+}
+.list-forty li span {
+  font-size: 17px;
+}
+.list-forty li p {
+  font-size: 16px;
+}
+.tabs-forty .text-hadith {
+  padding: 15px;
+}
+.text-hadith h3 {
+  font-size: 24px;
+  line-height: inherit;
+}
 
 }
 
@@ -11662,7 +11756,7 @@ input[type="number"] {
     height: 120px;
     margin-bottom: 30px;
 }
-.modal-index .modal-content .settings {
+.settings {
   padding: 20px;
 }
 .settings .select-div label {
@@ -11687,7 +11781,6 @@ input[type="number"] {
   right: -280px;
 }
 
-
 header.header-logo,
 .custom-size,
 .moaket,
@@ -11701,6 +11794,79 @@ header.header-logo,
 .top-menu .right {
   padding-right: 60px;
 }
+
+.about, .contact {
+    padding: 20px;
+    margin-top: 60px;
+}
+.about img, .contact img {
+  margin-bottom: 15px;
+  height: 125px;
+}
+.contact h3 {
+  font-size: 22px;
+}
+.contact .inputs .input-div {
+  margin-bottom: 13px;
+}
+.contact .btn-send {
+  font-size: 18px;
+  width: 165px;
+  padding: 8px;
+}
+.share-div .title-page {
+  font-size: 30px;
+  font-weight: normal;
+}
+.share {
+  grid-gap: 30px;
+  margin-top: 45px;
+}
+.copy-link {
+  margin-top: 30px;
+}
+.share li {
+  box-shadow: 0 0 0 4px #ffffff4d;
+}
+.share li a h3,.copy-link h3 {
+  font-size: 22px;
+}
+.share li a i,.copy-link h3 i {
+  font-size: 30px;
+}
+.share li a {
+  padding: 15px;
+}
+.copy-link {
+  padding: 15px;
+  box-shadow: 0 0 0 4px #ffffff4d;
+}
+.copy-link input {
+  padding: 10px;
+  height: 44px;
+}
+.read-praying li {
+  font-size: 20px;
+  width: 100%;
+}
+.step-app>.step-steps>li {
+  font-size: 17px;
+  padding: 10px;
+}
+.btm-part .title {
+  font-size: 24px;
+}
+
+.step-app>.step-footer button {
+  padding: 5px 14px;
+  width: 130px;
+}
+
+.rosary .rosary-select .select-div select {
+  font-size: 20px;
+  height: 50px;
+}
+
 }
 
 @media (max-width:991px) {
@@ -11773,6 +11939,113 @@ header.header-logo,
 }
 ul.list-sor {
   margin-top: 10px;
+}
+
+ul.list-hadith {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.about img, .contact img {
+  margin-bottom: 10px;
+  height: 100px;
+}
+.contact .inputs .input-div input {
+  width: 440px;
+  height: 44px;
+  padding-right: 50px;
+  font-size: 17px;
+}
+.contact .inputs .input-div i {
+  top: 13px;
+  font-size: 18px;
+}
+.contact textarea {
+  padding: 14px;
+  font-size: 17px;
+}
+.contact .btn-send {
+  font-size: 17px;
+  width: 140px;
+  padding: 6px;
+}
+.about p {
+  line-height: inherit;
+  text-align: inherit;
+  font-size: 17px;
+}
+.settings h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: initial;
+}
+.settings {
+  width: 600px;
+  margin-top: 50px;
+}
+
+.read-praying {
+  margin-top: 25px;
+}
+.read-praying li {
+  font-size: 19px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px #ffffff3b;
+  margin-bottom: 10px;
+}
+.flex-divs {
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+}
+.btm-part {
+  margin-top: 20px;
+}
+.input-file input {
+  font-size: 17px;
+  width: auto;
+  padding: 5px;
+}
+.input-file label {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.btm-part .title {
+  font-size: 20px;
+}
+.btm-part .flex-radio input {
+  width: 18px;
+  height: 18px;
+}
+.btm-part .flex-radio strong {
+  font-size: 19px;
+}
+h3.tilte-head {
+  font-size: 22px;
+}
+.libraries li p {
+  margin-top: 7px;
+  font-size: 18px;
+}
+.books li .name-book h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.books li .name-book p {
+  padding: 5px 15px;
+}
+.books li img {
+  width: 150px;
+  height: 120px;
+}
+.rosary-center img {
+  height: 150px;
+  margin: 30px auto;
+}
+.text-hadith h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.text-hadith p {
+  font-size: 20px;
 }
 }
 
@@ -11878,12 +12151,159 @@ ul.list-sor {
   grid-template-columns: 1fr 1fr;
   box-shadow: 0 0 0 3px #58585861;
 }
+
+ul.list-hadith {
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 0 0 3px #58585861;
+}
+
 div#topbar-track-details {
   margin-left: 10px;
 }
 
 .content {
   padding: 15px;
+}
+
+.list-videos {
+  grid-template-columns: 1fr 1fr;
+}
+
+.top-menu {
+  grid-gap: 20px;
+}
+
+.title-page {
+  font-size: 21px;
+  margin-bottom: 8px;
+  padding: 0 45px;
+  line-height: inherit;
+}
+
+.settings {
+  width: 90%;
+}
+.settings h3 {
+  font-size: 18px;
+}
+
+.read-praying li {
+  font-size: 18px;
+}
+
+.flex-divs {
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+}
+
+.step-app {
+  margin-top: 25px;
+}
+
+.input-file input {
+  width: 100%;
+  display: block;
+}
+
+.books {
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
+  margin-top: 25px;
+}
+.books li a {
+  border: 2px solid #ffffff36;
+  border-radius: 10px;
+  padding: 5px;
+}
+.rosary-center img {
+  height: 100px;
+  margin: 20px auto;
+}
+.rosary {
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 20px;
+  width: 90%;
+  box-shadow: 0 0 0 3px #58585861;
+}
+.rosary .rosary-select {
+  grid-gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.rosary .rosary-title {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.rosary .rosary-count button {
+  width: 37px;
+  height: 37px;
+}
+.rosary .rosary-count button i {
+  font-size: 23px;
+}
+.rosary .rosary-count input {
+  width: 110px;
+  font-size: 30px;
+}
+
+.rosary .rosary-select .btn-ok {
+  padding: 5px 15px;
+  width: 115px;
+  font-size: 17px;
+}
+.rosary .rosary-select input {
+  width: 100%;
+}
+
+.rosary .rosary-select .select-div select {
+  width: 100%;
+}
+
+.tabs-forty {
+  display: block;
+  margin-top: 25px;
+}
+
+.list-forty {
+  min-width: 100%;
+  width: 100%;
+  max-height: unset;
+  padding: 0 2px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: auto;
+  overflow-y: hidden;
+  margin: 0;
+  margin-bottom: 20px;
+  display: flex;
+  direction: rtl;
+  grid-gap: 5px;
+}
+.list-forty li span {
+  font-size: 16px;
+}
+.list-forty li p {
+  font-size: 14px;
+  text-align: center;
+}
+.list-forty li button {
+  font-size: 15px;
+  padding: 3px 5px;
+  text-align: center;
+  border: 2px solid #ffffff52 !important;
+}
+.list-forty li {
+  margin-bottom: 10px;
+}
+.list-forty::-webkit-scrollbar, .tabs-forty .text-hadith::-webkit-scrollbar {
+  height: 7px;
+}
+
+.list-forty li button.active::after {
+  display: none;
 }
 
 }
@@ -11956,6 +12376,12 @@ ul.list-sor {
     grid-template-columns: 1fr;
     padding: 10px;
 }
+
+ul.list-hadith {
+  grid-template-columns: 1fr;
+  padding: 10px;
+  grid-gap: 0;
+}
 div.jp-volume-bar {
   width: 45px;
 }
@@ -11986,6 +12412,204 @@ li.sora-container {
 
 li.sora-container:last-child {
   border-bottom: 0;
+}
+
+.list-videos {
+  grid-template-columns: 1fr;
+}
+.list-videos li iframe {
+  height: auto;
+}
+.about, .contact {
+  padding: 15px;
+  box-shadow: 0 0 0 3px #58585861;
+  border-radius: 15px;
+  font-size: 18px;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.about img, .contact img {
+  height: 70px;
+}
+.contact h3 {
+  font-size: 19px;
+  margin-bottom: 5px;
+}
+.contact .inputs .input-div input {
+  width: 100%;
+}
+.contact .inputs {
+  width: 100%;
+}
+.contact textarea {
+  padding: 10px;
+  font-size: 15px;
+  height: 110px;
+}
+.contact .inputs .input-div input {
+  font-size: 15px;
+}
+.contact .inputs .input-div {
+  margin-bottom: 10px;
+}
+.contact .btn-send {
+  font-size: 15px;
+  width: 110px;
+  padding: 4px;
+  margin-top: 15px;
+}
+.about h3 {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+.share-div .title-page {
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+.settings h3 {
+  font-size: 16px;
+}
+.settings {
+  width: 100%;
+  box-shadow: 0 0 0 3px #58585861;
+  padding: 13px;
+}
+.read-praying li {
+  font-size: 17px;
+  padding: 10px;
+}
+.read-praying {
+  margin-top: 0;
+}
+.step-app>.step-steps>li::before {
+  border-right: 21px solid #80817f;
+}
+.step-app>.step-steps>li::after {
+  border-right: 20px solid #a3a3a3cc;
+}
+
+.step-app>.step-steps>li.done::before {
+  border-right: 21px solid #bbbfb8 !important;
+}
+
+.step-app>.step-steps>li {
+  font-size: 16px;
+  padding: 7px 10px;
+}
+.step-content.checkout-form {
+  border: 3px solid #ffffff38;
+  border-top: 0;
+  padding: 15px;
+}
+h3.tilte-head {
+  font-size: 19px;
+  margin: 0;
+}
+hr {
+  margin: 15px 0;
+}
+.input-file input {
+  font-size: 15px;
+}
+.step-app>.step-steps>li span {
+  margin-left: 5px;
+  width: 25px;
+  height: 25px;
+  line-height: 22px;
+    font-size: 15px;
+}
+.btm-part .title {
+  font-size: 18px;
+  line-height: initial;
+}
+.btm-part .text {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.step-app {
+  margin-top: 0;
+}
+.img-library img {
+  height: 140px;
+}
+.libraries li img {
+  width: 200px;
+}
+.libraries {
+  grid-gap: 20px;
+}
+.libraries li p {
+  margin-top: 5px;
+  font-size: 17px;
+}
+.books {
+  margin-top: 0;
+}
+.books li img {
+  min-width: 135px;
+  max-width: 135px;
+  height: 100px;
+  width: auto;
+}
+.title-page {
+  font-size: 19px;
+}
+.rosary .rosary-select {
+  grid-gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  grid-template-columns: 1fr;
+}
+.rosary .rosary-select .btn-ok {
+  padding: 4px 15px;
+  font-size: 16px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+.rosary .rosary-select .select-div select {
+  font-size: 17px;
+  height: 44px;
+}
+.rosary .rosary-select input {
+  font-size: 17px;
+  height: 44px;
+  text-align: right;
+}
+.rosary .rosary-title {
+  margin-bottom: 15px;
+  font-size: 21px;
+}
+.rosary .rosary-count button {
+  width: 33px;
+  height: 33px;
+}
+.rosary .rosary-count button i {
+  font-size: 20px;
+}
+.rosary .rosary-count input {
+  font-size: 25px;
+  height: 40px;
+}
+
+.list-hadith li.sora-container {
+  padding: 10px 5px;
+}
+.list-forty li span {
+  font-size: 14px;
+}
+.text-hadith h3 {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+.tabs-forty .text-hadith {
+  padding: 10px;
+  border-radius: 10px;
+  line-height: inherit;
+  box-shadow: 0 0 0 3px #58585861;
+}
+.text-hadith p {
+  font-size: 18px;
 }
 }
 
@@ -12058,8 +12682,170 @@ header.header-logo {
 .player-container-middle {
   padding: 0 60px 0 100px;
 }
+.top-menu .input-div {
+  width: 100%;
+}
+.top-menu .input-div input {
+  width: 100%;
+}
+.top-menu .select-div,
+.top-menu .select-div select {
+  width: 100%;
+}
+.right h3 {
+  font-size: 17px;
+}
+.list-videos {
+  margin-top: 15px;
+  box-shadow: 0 0 0 2px #58585861;
+  border-radius: 10px;
+  padding: 8px;
+}
+.contact .inputs .input-div input {
+  height: 40px;
+  border: 1px solid #ababab52;
+  padding: 0 15px;
+  padding-right: 45px;
+}
+.contact textarea {
+  font-size: 15px;
+  height: 95px;
+  border: 1px solid #ababab52;
+  border-radius: 20px;
+}
+.contact .btn-send {
+  font-size: 14px;
+  width: 100px;
+  padding: 3px;
+}
+.contact .inputs .input-div i {
+  top: 12px;
+  font-size: 16px;
+  width: 25px;
+}
+.about, .contact {
+  padding: 10px;
+  font-size: 17px;
+  margin-top: 70px;
+}
+.about img, .contact img {
+  height: 65px;
+  margin-bottom: 5px;
+}
+.contact h3 {
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+.about h3 {
+  font-size: 20px;
+}
+.about p {
+  font-size: 15px;
+}
+.settings h3 {
+  font-size: 15px;
+}
+.title-page {
+  font-size: 17px;
+}
+.read-praying li {
+  font-size: 16px;
+}
+.step-app>.step-steps>li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  grid-gap: 5px;
+  padding: 7px 5px;
+}
+.flex-divs .input-select {
+  display: block;
+}
+.flex-divs .input-select .select-div select {
+  width: 100%;
+  margin-bottom: 7px;
+}
+.flex-divs .select-div select {
+  font-size: 15px;
+  height: 36px;
+  line-height: 18px;
+}
+.flex-divs .input-block input {
+  font-size: 15px;
+  height: 36px;
+}
+.btm-part .flex-radio {
+  grid-gap: 40px;
+  margin-bottom: 10px;
+}
+.btm-part {
+  margin-top: 10px;
+}
+.step-app>.step-footer {
+  margin: 0;
+  padding-top: 15px;
+}
+.step-app>.step-footer button {
+  padding: 2px 10px;
+  width: 100px;
+  font-size: 15px;
+}
+h3.tilte-head {
+  font-size: 17px;
+}
+.step-app>.step-steps>li::after {
+  border-right: 15px solid #a3a3a3cc;
+}
+.step-app>.step-steps>li::before {
+  border-right: 16px solid #80817f;
+}
+.step-app>.step-steps>li.done::before {
+  border-right: 16px solid #bbbfb8 !important;
+}
+.flex-divs {
+    grid-gap: 7px;
+}
+.step-content.checkout-form {
+  padding: 10px;
+}
+.img-library img {
+  height: 130px;
+}
+.img-library {
+  margin-bottom: 20px;
+}
+.books li a {
+    padding: 10px;
+    display: block;
+}
+.books li img {
+  min-width: unset;
+  max-width: unset;
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  margin-left: 0;
+  margin-bottom: 7px;
+}
+.flipbook-icon-fa {
+  width: 30px !important;
+}
+.solid-container {
+  height: calc(100vh - 91px);
+}
+.rosary {
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 100%;
+  box-shadow: 0 0 0 2px #58585861;
+}
+.rosary .rosary-select .btn-ok {
+  padding: 2px 15px;
+  font-size: 15px;
+  width: 100px;
+}
 }
 
-@media (max-width:320px) {
-
-}
