@@ -12,6 +12,7 @@
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/plugins.css">
+	<link href="assets/js/flip-book/css/flipbook.style.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	
 </head>
@@ -111,7 +112,7 @@
 
                 <div class="content">
 					<h3 class="title-page">المعاملات الإمام عبد العزيز بن عبد الله بن باز (2015)</h3>
-                    <div id="example1"></div>			
+                    <div class="solid-container"></div>		
                 </div>
 				
 		</div><!-- //Main wrapper -->
@@ -127,8 +128,19 @@
 	<script src="assets/js/plugins.js"></script>
 	<script src="assets/js/active.js"></script>
 	<script src="assets/js/scripts.js"></script>
-	<script src="assets/js/PDFObject/pdfobject.js"></script>
-	<script>PDFObject.embed("assets/quran.pdf", "#example1");</script>
+	
+	<script src="assets/js/flip-book/js/flipbook.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".solid-container").flipBook({
+				pdfUrl: "assets/quran.pdf",
+				rightToLeft: true,
+				btnSize: 18,
+				backgroundColor: "#0a0c06"
+			});
+
+		})
+	</script>
 </body>
 
 </html>
